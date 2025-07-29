@@ -1,0 +1,144 @@
+/* Container for whole form */
+.prediction-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
+}
+
+/* Header */
+.prediction-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* Form styling */
+.prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label and select/input container */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+/* Inputs and selects styling */
+select, input[type="number"] {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1.8px solid #d0d7de;
+  border-radius: 8px;
+  outline-offset: 2px;
+  transition: border-color 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select:focus, input[type="number"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.35);
+}
+
+/* Button style */
+button[type="submit"] {
+  margin-top: 25px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+  box-shadow: 0 8px 20px rgba(41, 128, 185, 0.6);
+}
+
+/* Error message styling */
+.error {
+  margin-top: 15px;
+  padding: 12px 15px;
+  background-color: #ffeded;
+  border-left: 6px solid #e74c3c;
+  border-radius: 8px;
+  color: #c0392b;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Result card styling */
+.result {
+  margin-top: 40px;
+  background: #f0f5f9;
+  border-radius: 14px;
+  padding: 30px 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-left: 8px solid #3498db;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.result h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.result p {
+  font-size: 17px;
+  margin: 10px 0;
+  line-height: 1.4;
+  color: #34495e;
+  font-weight: 500;
+}
+
+/* Highlight yes/no text for risks */
+.result p b {
+  color: #2c3e50;
+}
+
+.result p b.overstock-risk-yes {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.result p b.overstock-risk-no {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.result p b.shortage-risk-yes {
+  color: #e67e22;
+  font-weight: 700;
+}
+
+.result p b.shortage-risk-no {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* Simple fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
